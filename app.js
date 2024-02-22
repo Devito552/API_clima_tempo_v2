@@ -14,7 +14,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 const traducaoClima = {
     "few clouds": "Poucas nuvens",
-    "scattered clouds": "Nuvens dispersas"
+    "scattered clouds": "Nuvens dispersas",
+    "overcast clouds": "Nublado"
 }
 
 app.get('/climatempo/:cidade', async (req, res)=>{
@@ -42,5 +43,5 @@ app.get('/climatempo/:cidade', async (req, res)=>{
     } catch (error){
         res.status(500).send({erro:'Erro ao obter dados meteorológicos', error });
     }
-    
+
 });
