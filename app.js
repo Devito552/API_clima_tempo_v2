@@ -42,4 +42,5 @@ app.get('/climatempo/:cidade', async (req, res)=>{
     } catch (error){
         res.status(500).send({erro:'Erro ao obter dados meteorológicos', error });
     }
+    
 });
